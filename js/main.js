@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 设置事件监听
     setupEventListeners();
 
+    // 初始化目标货币选项（确保与基础货币一致）
+    updateTargetCurrencyOptions();
+
     // 初始化显示
     updateDashboard();
 });
