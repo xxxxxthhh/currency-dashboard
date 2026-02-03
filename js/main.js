@@ -195,11 +195,17 @@ function updateChart() {
         options: {
             responsive: true,
             maintainAspectRatio: true,
-            aspectRatio: 2,
+            aspectRatio: window.innerWidth < 768 ? 1.2 : 2,
             plugins: {
                 legend: {
                     display: true,
-                    position: 'top'
+                    position: 'top',
+                    labels: {
+                        boxWidth: window.innerWidth < 768 ? 10 : 15,
+                        font: {
+                            size: window.innerWidth < 768 ? 10 : 12
+                        }
+                    }
                 },
                 tooltip: {
                     mode: 'index',
@@ -212,6 +218,13 @@ function updateChart() {
                     title: {
                         display: true,
                         text: '日期'
+                    },
+                    ticks: {
+                        maxRotation: 45,
+                        minRotation: 45,
+                        font: {
+                            size: window.innerWidth < 768 ? 9 : 11
+                        }
                     }
                 },
                 y: {
@@ -219,6 +232,11 @@ function updateChart() {
                     title: {
                         display: true,
                         text: '汇率'
+                    },
+                    ticks: {
+                        font: {
+                            size: window.innerWidth < 768 ? 9 : 11
+                        }
                     }
                 }
             }
