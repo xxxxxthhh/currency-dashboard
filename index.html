@@ -43,12 +43,22 @@
 
         <div class="controls">
             <label>
-                选择货币对：
+                基础货币：
+                <select id="base-currency-select">
+                    <option value="USD" selected>USD (美元)</option>
+                    <option value="CNY">CNY (人民币)</option>
+                    <option value="SGD">SGD (新加坡元)</option>
+                    <option value="JPY">JPY (日元)</option>
+                    <option value="AUD">AUD (澳元)</option>
+                </select>
+            </label>
+            <label>
+                目标货币：
                 <select id="currency-select">
-                    <option value="CNY">USD/CNY</option>
-                    <option value="SGD">USD/SGD</option>
-                    <option value="JPY">USD/JPY</option>
-                    <option value="AUD">USD/AUD</option>
+                    <option value="CNY">CNY (人民币)</option>
+                    <option value="SGD">SGD (新加坡元)</option>
+                    <option value="JPY">JPY (日元)</option>
+                    <option value="AUD">AUD (澳元)</option>
                 </select>
             </label>
             <label>
