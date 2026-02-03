@@ -2,7 +2,7 @@
 // 全局变量
 let historicalData = null;
 let currentChart = null;
-let selectedBaseCurrency = 'USD';
+let selectedBaseCurrency = 'SGD';
 let selectedTargetCurrency = 'CNY';
 let selectedTimeRange = 365;
 
