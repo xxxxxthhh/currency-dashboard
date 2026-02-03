@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汇率监控 Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💱 汇率监控 Dashboard</h1>
+            <p class="subtitle">实时追踪货币汇率走势与偏离预警</p>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-card" id="stat-usd-cny">
+                <div class="stat-label">USD/CNY</div>
+                <div class="stat-value">--</div>
+                <div class="stat-change">--</div>
+                <div class="stat-deviation">--</div>
+            </div>
+            <div class="stat-card" id="stat-usd-sgd">
+                <div class="stat-label">USD/SGD</div>
+                <div class="stat-value">--</div>
+                <div class="stat-change">--</div>
+                <div class="stat-deviation">--</div>
+            </div>
+            <div class="stat-card" id="stat-usd-jpy">
+                <div class="stat-label">USD/JPY</div>
+                <div class="stat-value">--</div>
+                <div class="stat-change">--</div>
+                <div class="stat-deviation">--</div>
+            </div>
+            <div class="stat-card" id="stat-usd-aud">
+                <div class="stat-label">USD/AUD</div>
+                <div class="stat-value">--</div>
+                <div class="stat-change">--</div>
+                <div class="stat-deviation">--</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <label>
+                选择货币对：
+                <select id="currency-select">
+                    <option value="CNY">USD/CNY</option>
+                    <option value="SGD">USD/SGD</option>
+                    <option value="JPY">USD/JPY</option>
+                    <option value="AUD">USD/AUD</option>
+                </select>
+            </label>
+            <label>
+                时间范围：
+                <select id="timerange-select">
+                    <option value="30">30天</option>
+                    <option value="90">90天</option>
+                    <option value="180">180天</option>
+                    <option value="365" selected>1年</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="mainChart"></canvas>
+        </div>
+
+        <div class="info-section">
+            <h3>📊 统计信息</h3>
+            <div id="statistics"></div>
+        </div>
+
+        <footer>
+            <p>最后更新：<span id="last-update">--</span></p>
+            <p>数据来源：模拟数据（演示用）</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
